@@ -5,7 +5,9 @@ const cors = require("cors");
 const app = express();
 
 // Allow frontend requests
-app.use(cors());
+app.use(cors({
+  origin: "https://tradewatch-frontend.netlify.app"
+}));
 
 // Health route
 app.get("/", (req, res) => {
